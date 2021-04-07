@@ -1,0 +1,16 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+feign:
+  httpclient:
+    connection-timeout: 5000
+  hystrix:
+    enabled: true
+logging:
+  level:
+    com.woxian.springcloud.service.PaymentFeignService: debug   #debug级别监控PaymentFeignService接口
