@@ -111,12 +111,40 @@ Spring cloud config ![image-20210407140505368](C:\Users\sun\AppData\Roaming\Typo
 
 ![image-20210407142613209](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210407142613209.png)
 
+
+
 ![image-20210407144525901](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210407144525901.png)
+
+手动刷新配置  curl -X POST "http://localhost:3355/actuator/refresh"
+
+![image-20210408115354600](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408115354600.png)
 
 Spring Cloud Bus
 
- 消息总线 与config搭配使用 Bus支持两种消息代理 RabbitMQ和Kafka
+ **消息总线** 与config搭配使用 **实现配置的动态刷新** Bus支持两种消息代理 RabbitMQ和Kafka
 
 ![image-20210407145303113](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210407145303113.png)
 
 ![image-20210407155951219](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210407155951219.png)
+
+![image-20210408133843498](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408133843498.png)
+
+![image-20210408134150832](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408134150832.png)
+
+curl -X POST "http://localhost:3344/actuator/bus-refresh"
+
+curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3366" 也可以手动刷新客户端，让客户端拉取 curl -X POST "http://localhost:3355/actuator/refresh"
+
+![image-20210408144002247](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408144002247.png)
+
+![image-20210408144807768](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408144807768.png)
+
+Spring Cloud Stream
+
+![image-20210408150153027](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408150153027.png)
+
+![image-20210408151910381](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408151910381.png)
+
+![image-20210408152224410](C:\Users\sun\AppData\Roaming\Typora\typora-user-images\image-20210408152224410.png)
+
+spring cloud stream消费组的概念
