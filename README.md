@@ -5,3 +5,4 @@ spring cloud微服务架构
 * 分布式事务 seata
 * 服务熔断降级限流 sentinel
 * 服务调用 openfeign
+* 全链路追踪 sleuth
